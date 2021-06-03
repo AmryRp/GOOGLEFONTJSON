@@ -11,9 +11,6 @@
  * #014 - #100DaysOfCode
  * By ilithya | 2019
  */
-import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/build/three.module.js';
-import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/controls/OrbitControls.js';
-import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/GLTFLoader.js';
 
 const nearDist = 0.1;
 const farDist = 9000;
@@ -42,7 +39,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.querySelector("#canvaswrapper").appendChild(renderer.domElement);
 
 //Obyek Createed
-const gltfLoader = new GLTFLoader();
+const gltfLoader = new THREE.GLTFLoader();
 gltfLoader.load('https://raw.githubusercontent.com/AmryRp/GOOGLEFONTJSON/main/Lamp.gltf', (gltf) => {
     const root = gltf.scene;
     scene.add(root);
